@@ -2,11 +2,11 @@
 
 @section('content')
     <div class="col-12 p-1">
-        <div class="col-lg-12 d-flex mt-3">
+        <div class="col-lg-12 d-flex mt-4">
             <div class="col-lg-3">
             </div>
-            <div class="col-lg-6"></div>
-            <div class="col-lg-3 d-flex flex-row-reverse">
+            <div class="col-lg-7"></div>
+            <div class="col-lg-2 d-flex flex-row-reverse">
                 <a class="btn btn-outline-primary btn-sm pr-3 pl-3" href="#" role="button">ثبت نام</a>
                 <p class="pl-2 pr-2 mb-0 pt-1">\</p>
                 <a class="btn btn-outline-danger btn-sm pr-3 pl-3" href="#" role="button">ورود</a>
@@ -35,7 +35,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-12 d-flex" style="margin-top: 9rem;">
+            <div class="col-lg-12 d-flex" style="margin-top: 8rem;">
                 <div class="col-6 text-right">طراحی شده با ❤ توسط <a href="http://omoghadasi.ir">امید مقدسی</a>
                 </div>
                 <div class="col-6 p-0">
