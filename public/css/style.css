@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'joorito';
+    src:  url('/fonts/iransans.ttf');
+}
+*,body{
+    font-family: joorito, Tahoma, serif !important;
+}
+
+.search-input,.btn-help{
+    border-radius: 5rem;
+}
