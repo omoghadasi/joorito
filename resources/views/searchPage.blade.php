@@ -20,10 +20,10 @@
                 </div>
                 <div class="input-group col-8 d-flex justify-content-center">
 
-                    <form action="#" method="get" class="col-12">
+                    <form action="/results" class="col-12">
                         <div class="form-group">
                             <label for="search-input-label"></label>
-                            <input type="search" class="form-control pt-4 pb-4 pr-3 search-input" id="search-input-label" placeholder="دنبال چی میگردی؟ فقط کافیه تایپش کنی...">
+                            <input type="search" class="form-control pt-4 pb-4 pr-3 search-input" id="search-input-label" name="keyword" placeholder="دنبال چی میگردی؟ فقط کافیه تایپش کنی...">
                         </div>
                     </form>
 
