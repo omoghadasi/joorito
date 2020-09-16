@@ -17,6 +17,7 @@ class CreateSitesTable extends Migration
             $table->id();
             $table->integer('user_id');
             $table->string('title',64);
+            $table->string('desc');
             $table->text('url');
             $table->timestamps();
         });

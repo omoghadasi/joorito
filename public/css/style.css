@@ -2,15 +2,25 @@
     font-family: 'joorito';
     src:  url('/fonts/iransans.ttf');
 }
+*{
+    box-sizing: border-box;
+}
 *,body{
     font-family: joorito, Tahoma, serif !important;
 }
-
+html,body{
+    height: 100%;
+}
+.main-search-page{
+z-index: 900;
+}
 .search-input,.btn-help{
     border-radius: 5rem;
 }
 
-
+img{
+    width: 100%;
+}
 h1{
     text-align:center;
     margin-bottom:2rem;
@@ -101,6 +111,7 @@ p {
     display: inline-block;
 }
 .blog-card .author .avatar {
+    display: inline;
     width: 36px;
     height: 36px;
     overflow: hidden;
@@ -115,4 +126,39 @@ p {
 .blog-card .ftr .stats {
     float: left;
     line-height: 30px;
+}
+
+/* ---- particles.js container ---- */
+#particles-js canvas {
+    display: block;
+    vertical-align: top;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    -webkit-transition: opacity .8s ease, -webkit-transform 1.4s ease;
+    transition: opacity .8s ease, transform 1.4s ease
+}
+
+#particles-js{
+    z-index: 850;
+    position:relative;
+    width: 100%;
+    height: 99%;
+    background-color: white;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.main-register{
+    height: 100%;
+    background: url("/images/khaju_bridge.jpg") no-repeat local center;
+    background-size: cover;
+
+}
+
+.register-card{
+    background: white;
+    border-radius: 10px;
 }

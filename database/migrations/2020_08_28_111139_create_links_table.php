@@ -18,7 +18,9 @@ class CreateLinksTable extends Migration
             $table->integer('site_id');
             $table->integer('link_type_id');
             $table->string('title');
+            $table->string('desc');
             $table->text('url');
+            $table->text('img_url');
             $table->timestamp('expires_on');
             $table->timestamps();
         });

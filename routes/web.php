@@ -13,11 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('searchPage');
+Route::get('/', 'searchController@showPage');
+Route::get('/results', 'resultsController@showPage');
+Route::get('/categories', 'categoriesController@showPage');
+Route::get('/statistics', 'statisticsController@showPage');
+
+Route::get('/login', function () {
+    return view('loginPage');
 });
-Route::get('/results', function () {
-    return view('resultsPage',[
-        'keyword'=>request('keyword')
-    ]);
+
+Route::get('/register', function () {
+    return view('registerPage');
+});
+Route::get('/dev', function () {
+    return view('test');
 });

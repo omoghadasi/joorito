@@ -10,7 +10,8 @@
                     <div class="form-group">
                         <label for="search-input-label"></label>
                         <input type="search" class="form-control pt-4 pb-4 pr-3 search-input" id="search-input-label"
-                               name="keyword" placeholder="دنبال چی میگردی؟ فقط کافیه تایپش کنی...">
+                               name="keyword" value="{{$keyword}}"
+                               placeholder="دنبال چی میگردی؟ فقط کافیه تایپش کنی...">
                     </div>
                 </form>
             </div>
@@ -23,18 +24,17 @@
     </div>
 
     <div class="col-12 main">
-<p class="text-center">{{$keyword}}</p>
         <!-- section category -->
 
         <h1>دوره های آموزشی</h1>
         <div class="container">
-            <div class="row">
+            <div class="row slick-slider">
                 <div class="col-md-4">
                     <div class="blog-card blog-card-blog text-right">
                         <div class="blog-card-image">
-                            <a href="#"> <img class="img"
-                                              src="http://omoghadasi.ir/wp-content/uploads/2019/11/a-few-steps-with-Bootstrap.jpg">
-                            </a>
+                            <img class="img"
+                                 src="http://omoghadasi.ir/wp-content/uploads/2019/11/a-few-steps-with-Bootstrap.jpg"
+                                 alt="hi">
                             <div class="ripple-cont"></div>
                         </div>
                         <div class="blog-table">
@@ -46,7 +46,89 @@
                             <p class="blog-card-description text-justify">
                                 در دوره آموزشی چند قدم با Bootstrap قصد داریم که از صفر صفر کار با این کامپوننت یا همان
                                 کتابخانه را یاد بگیریم. در این دروه ما کاملا از پایه و از bootstrap3 شوع خواهیم کرد و پس
-                                از بررسی کامل آن به سراغ نسخه بعدی این کتابخانه یعنی bootstrap4 که در حال حاضر اخرین....</p>
+                                از بررسی کامل آن به سراغ نسخه بعدی این کتابخانه یعنی bootstrap4 که در حال حاضر
+                                اخرین....</p>
+                            <div class="ftr">
+                                <div class="author">
+                                    <a href="#"> <img
+                                            src="http://omoghadasi.ir/wp-content/uploads/2019/06/omoghadasi-logo.png"
+                                            alt="..."
+                                            class="avatar img-raised"> <span>امید مقدسی</span> </a>
+                                </div>
+                                <div class="stats p-1"><i class="far fa-eye"></i> 500 بازدید</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="blog-card blog-card-blog text-right">
+                        <div class="blog-card-image">
+                            <a href="#"> <img class="img" src="https://picsum.photos/id/1084/536/354?grayscale"> </a>
+                            <div class="ripple-cont"></div>
+                        </div>
+                        <div class="blog-table">
+                            <h6 class="blog-category blog-text-success"><i class="far fa-newspaper"></i> دوره آموزشی
+                            </h6>
+                            <h5 class="blog-card-caption text-justify">
+                                <a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</a>
+                            </h5>
+                            <p class="blog-card-description text-justify">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                                از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون
+                                و سطرآنچنان که لازم است</p>
+                            <div class="ftr">
+                                <div class="author">
+                                    <a href="#"> <img
+                                            src="http://omoghadasi.ir/wp-content/uploads/2019/06/omoghadasi-logo.png"
+                                            alt="..."
+                                            class="avatar img-raised"> <span>امید مقدسی</span> </a>
+                                </div>
+                                <div class="stats p-1"><i class="far fa-eye"></i> 500 بازدید</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="blog-card blog-card-blog text-right">
+                        <div class="blog-card-image">
+                            <a href="#"> <img class="img" src="https://picsum.photos/id/1084/536/354?grayscale"> </a>
+                            <div class="ripple-cont"></div>
+                        </div>
+                        <div class="blog-table">
+                            <h6 class="blog-category blog-text-success"><i class="far fa-newspaper"></i> دوره آموزشی
+                            </h6>
+                            <h5 class="blog-card-caption text-justify">
+                                <a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</a>
+                            </h5>
+                            <p class="blog-card-description text-justify">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                                از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون
+                                و سطرآنچنان که لازم است</p>
+                            <div class="ftr">
+                                <div class="author">
+                                    <a href="#"> <img
+                                            src="http://omoghadasi.ir/wp-content/uploads/2019/06/omoghadasi-logo.png"
+                                            alt="..."
+                                            class="avatar img-raised"> <span>امید مقدسی</span> </a>
+                                </div>
+                                <div class="stats p-1"><i class="far fa-eye"></i> 500 بازدید</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="blog-card blog-card-blog text-right">
+                        <div class="blog-card-image">
+                            <a href="#"> <img class="img" src="https://picsum.photos/id/1084/536/354?grayscale"> </a>
+                            <div class="ripple-cont"></div>
+                        </div>
+                        <div class="blog-table">
+                            <h6 class="blog-category blog-text-success"><i class="far fa-newspaper"></i> دوره آموزشی
+                            </h6>
+                            <h5 class="blog-card-caption text-justify">
+                                <a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</a>
+                            </h5>
+                            <p class="blog-card-description text-justify">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                                از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون
+                                و سطرآنچنان که لازم است</p>
                             <div class="ftr">
                                 <div class="author">
                                     <a href="#"> <img
@@ -124,7 +206,7 @@
                 <div class="col-md-4">
                     <div class="blog-card blog-card-blog text-right">
                         <div class="blog-card-image">
-                            <a href="#"> <img class="img"
+                            <a href="#"> <img class="img img-profile"
                                               src="http://omoghadasi.ir/wp-content/uploads/2019/11/a-few-steps-with-Bootstrap.jpg">
                             </a>
                             <div class="ripple-cont"></div>
@@ -138,7 +220,8 @@
                             <p class="blog-card-description text-justify">
                                 در دوره آموزشی چند قدم با Bootstrap قصد داریم که از صفر صفر کار با این کامپوننت یا همان
                                 کتابخانه را یاد بگیریم. در این دروه ما کاملا از پایه و از bootstrap3 شوع خواهیم کرد و پس
-                                از بررسی کامل آن به سراغ نسخه بعدی این کتابخانه یعنی bootstrap4 که در حال حاضر اخرین....</p>
+                                از بررسی کامل آن به سراغ نسخه بعدی این کتابخانه یعنی bootstrap4 که در حال حاضر
+                                اخرین....</p>
                             <div class="ftr">
                                 <div class="author">
                                     <a href="#"> <img
@@ -230,7 +313,8 @@
                             <p class="blog-card-description text-justify">
                                 در دوره آموزشی چند قدم با Bootstrap قصد داریم که از صفر صفر کار با این کامپوننت یا همان
                                 کتابخانه را یاد بگیریم. در این دروه ما کاملا از پایه و از bootstrap3 شوع خواهیم کرد و پس
-                                از بررسی کامل آن به سراغ نسخه بعدی این کتابخانه یعنی bootstrap4 که در حال حاضر اخرین....</p>
+                                از بررسی کامل آن به سراغ نسخه بعدی این کتابخانه یعنی bootstrap4 که در حال حاضر
+                                اخرین....</p>
                             <div class="ftr">
                                 <div class="author">
                                     <a href="#"> <img
@@ -300,6 +384,13 @@
 
             </div>
 
+        </div>
+    </div>
+    <div class="col-lg-12 d-flex mt-3 mb-3">
+        <div class="col-6 text-right">طراحی شده با ❤ توسط <a href="http://omoghadasi.ir">امید مقدسی</a>
+        </div>
+        <div class="col-6 p-0">
+            <a class="btn btn-outline-primary pl-3 pr-3 btn-help btn-sm" href="#" role="button">درباره جـــــوریتو</a>
         </div>
     </div>
 @endsection
