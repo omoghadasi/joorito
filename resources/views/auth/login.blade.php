@@ -3,17 +3,18 @@
     <div class="col-12 d-flex justify-content-center align-items-center align-content-stretch main-register">
         <div class="col-8 d-flex register-card p-0">
             <div class="col-lg-6 p-5 text-right"><h3 class="mb-3">ورود</h3>
-                <form action="#" method="post">
+                <form action="{{route('login')}}" method="POST">
+                    @csrf
                     <div class="form-group">
-                        <input type="email" class="form-control pt-4 pb-4" id="exampleInputEmail1" aria-describedby="emailHelp"
-                               placeholder="نام کاربری ....">
+                        <input type="email" class="form-control pt-4 pb-4" id="imail" aria-describedby="emailHelp"
+                               placeholder="ایمیل ...." name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                     </div>
                     <div class="form-group mb-2">
-                        <input type="password" class="form-control pt-4 pb-4" id="exampleInputPassword1"
-                               placeholder="رمزعبور ....">
+                        <input id="password" type="password" class="form-control pt-4 pb-4"
+                               placeholder="رمزعبور ...." name="password" required autocomplete="current-password">
                     </div>
                     <label for="rememberme">
-                        <input type="checkbox" name="remembered" id="remembered" value="forever">
+                        <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                         <small>مرا به خاطر بسپار </small>
                     </label>
                     <button type="submit" class="btn btn-outline-danger btn-block pt-2 pb-2">ورود به حساب کاربری</button>
