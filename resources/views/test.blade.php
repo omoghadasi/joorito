@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="col-md-12">
-    
+
 
 </div>
 <?php
@@ -35,6 +35,11 @@ foreach ($array as $item) {
     echo $item->short_description;
     echo $item->price;
     echo "<br><br>";
+}
+
+$roles=\App\Role::all()->where('id',2);
+foreach ($roles as $role) {
+    echo $role->title;
 }
 ?>
 

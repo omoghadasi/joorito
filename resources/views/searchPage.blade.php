@@ -9,9 +9,13 @@
                 </div>
                 <div class="col-lg-7"></div>
                 <div class="col-lg-2 d-flex flex-row-reverse">
-                    <a class="btn btn-outline-primary btn-sm pr-3 pl-3" href="/register" role="button">ثبت نام</a>
-                    <p class="pl-2 pr-2 mb-0 pt-1">\</p>
-                    <a class="btn btn-outline-danger btn-sm pr-3 pl-3" href="/login" role="button">ورود</a>
+                    @auth()
+                        <a class="btn btn-outline-primary btn-sm pr-3 pl-3" href="{{route('home')}}" role="button">حساب کاربری</a>
+                    @else
+                        <a class="btn btn-outline-primary btn-sm pr-3 pl-3" href="{{route('register')}}" role="button">ثبت نام</a>
+                        <p class="pl-2 pr-2 mb-0 pt-1">\</p>
+                        <a class="btn btn-outline-danger btn-sm pr-3 pl-3" href="{{route('login')}}" role="button">ورود</a>
+                    @endauth
                 </div>
             </div>
             <div class="col-lg-12 pt-5">
@@ -22,7 +26,7 @@
                     </div>
                     <div class="input-group col-8 d-flex justify-content-center">
 
-                        <form action="/results" class="col-12">
+                        <form action="{{route('results')}}" class="col-12">
                             <div class="form-group">
                                 <label for="search-input-label"></label>
                                 <input type="search" class="form-control pt-4 pb-4 pr-3 search-input" id="search-input-label" name="keyword" placeholder="دنبال چی میگردی؟ فقط کافیه تایپش کنی...">
@@ -30,9 +34,9 @@
                         </form>
 
                         <div class="col-12 d-flex justify-content-center">
-                            <a class="btn btn-primary mt-3 mr-2 ml-2 pb-2 pt-2 pl-3 pr-3" href="/categories" role="button">همه دسته
+                            <a class="btn btn-primary mt-3 mr-2 ml-2 pb-2 pt-2 pl-3 pr-3" href="{{route('categories')}}" role="button">همه دسته
                                 بندی ها</a>
-                            <a class="btn btn-secondary mt-3 mr-2 ml-2 pb-2 pt-2 pl-3 pr-3" href="/statistics" role="button">آمار
+                            <a class="btn btn-secondary mt-3 mr-2 ml-2 pb-2 pt-2 pl-3 pr-3" href="{{route('statistics')}}" role="button">آمار
                                 جــــوریتو</a>
                         </div>
                     </div>
@@ -46,6 +50,6 @@
                 </div>
             </div>
     </div>
-        <script src="js/particles/particles.js"></script>
-        <script src="js/particles/app.js"></script>
+        <script src="{{url('/js/particles/particles.js')}}"></script>
+        <script src="{{url('/js/particles/app.js')}}"></script>
 @endsection

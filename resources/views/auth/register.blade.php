@@ -27,7 +27,7 @@
                 <p>قبلا ثبت نام کردید؟ <a href="{{route('login')}}">وارد شوید.</a></p>
             </div>
             <div class="col-lg-6 pt-5 d-flex justify-content-center align-items-center">
-                <img src="/images/man-with-laptop.jpg" alt="">
+                <img src="{{url('/images/man-with-laptop.jpg')}}" alt="">
             </div>
         </div>
 

@@ -3,10 +3,10 @@
     <div class="col-12 p-1">
         <div class="col-lg-12 d-flex align-items-center">
             <div class="col-lg-2 pl-0 text-right">
-                <a href="/"><h3 class="mb-1">جــــوریتو</h3></a>
+                <a href="{{route('index')}}"><h3 class="mb-1">جــــوریتو</h3></a>
             </div>
             <div class="col-lg-8 p-0">
-                <form action="/results" class="col-12">
+                <form action="{{route('results')}}" class="col-12">
                     <div class="form-group">
                         <label for="search-input-label"></label>
                         <input type="search" class="form-control pt-4 pb-4 pr-3 search-input" id="search-input-label"
@@ -16,9 +16,13 @@
                 </form>
             </div>
             <div class="col-lg-2 d-flex flex-row-reverse">
-                <a class="btn btn-outline-primary btn-sm pr-3 pl-3" href="#" role="button">ثبت نام</a>
-                <p class="pl-2 pr-2 mb-0 pt-1">\</p>
-                <a class="btn btn-outline-danger btn-sm pr-3 pl-3" href="#" role="button">ورود</a>
+                @auth()
+                    <a class="btn btn-outline-primary btn-sm pr-3 pl-3" href="{{route('home')}}" role="button">حساب کاربری</a>
+                @else
+                    <a class="btn btn-outline-primary btn-sm pr-3 pl-3" href="{{route('register')}}" role="button">ثبت نام</a>
+                    <p class="pl-2 pr-2 mb-0 pt-1">\</p>
+                    <a class="btn btn-outline-danger btn-sm pr-3 pl-3" href="{{route('login')}}" role="button">ورود</a>
+                @endauth
             </div>
         </div>
     </div>
