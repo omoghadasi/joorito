@@ -17,7 +17,7 @@ Auth::routes();
 Route::prefix('home')->group(function (){
     Route::get('/', 'HomeController@home')->name('home');
     Route::get('/profile', 'UserController@show')->name('profile');
-    Route::post('/profile/update', 'UserController@edit')->name('profile_update');
+    Route::put('/profile/update', 'UserController@edit')->name('profile_update');
     Route::get('/setting', 'HomeController@setting')->name('setting');
     Route::get('/sites', 'HomeController@sites')->name('sites')->middleware('checkrole');
 });

@@ -32,7 +32,7 @@ class UserController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -48,8 +48,9 @@ class UserController extends Controller
      */
     public function show()
     {
-        $profiles=Profile::all()->where('user_id',Auth::id());
-        if (count($profiles)==0){
+        $profiles = Profile::all()->where('user_id', Auth::id());
+
+        if (count($profiles) == 0) {
             $profile = new Profile([
                 'user_id' => Auth::id(),
                 'fname' => 'نام شما...',
@@ -62,57 +63,58 @@ class UserController extends Controller
             ]);
             $profile->save();
             return redirect()->route('profile');
-        }else{
-            foreach ($profiles as $profile){
-                $fname=$profile->fname;
-                $lname=$profile->lname;
-                $address=$profile->address;
-                $ostan=$profile->ostan;
-                $shahr=$profile->shahr;
-                $phone=$profile->phone;
-                $about_me=$profile->about_me;
-                $img=$profile->src_img;
+        } else {
+            foreach ($profiles as $profile) {
+                $fname = $profile->fname;
+                $lname = $profile->lname;
+                $address = $profile->address;
+                $ostan = $profile->ostan;
+                $shahr = $profile->shahr;
+                $phone = $profile->phone;
+                $about_me = $profile->about_me;
+                $img = $profile->src_img;
             }
         }
-        return view('adminpanel.profile',[
-            'fname'=>$fname,
-            'lname'=>$lname,
-            'address'=>$address,
-            'ostan'=>$ostan,
-            'shahr'=>$shahr,
-            'phone'=>$phone,
-            'about_me'=>$about_me,
-            'img'=>$img,
+        return view('adminpanel.profile', [
+            'fname' => $fname,
+            'lname' => $lname,
+            'address' => $address,
+            'ostan' => $ostan,
+            'shahr' => $shahr,
+            'phone' => $phone,
+            'about_me' => $about_me,
+            'img' => $img,
         ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
      */
     public function edit(Request $request)
     {
-        $profile=Profile::all()->where('user_id',Auth::id());
-        $profile->fname=\request('fname');
-        $profile->lname=\request('lname');
-        $profile->address=\request('address');
-        $profile->ostan=\request('ostan');
-        $profile->shahr=\request('shahr');
-        $profile->phone=\request('phone');
-        $profile->about_me=\request('about_me');
-        $profile->src_img=\request('img');
+        $profiles = Profile::all()->where('user_id', Auth::id());
+        foreach ($profiles as $date) {
+            $date->fname = \request('fname');
+            $date->lname = \request('lname');
+            $date->address = \request('address');
+            $date->ostan = \request('ostan');
+            $date->shahr = \request('shahr');
+            $date->phone = \request('phone');
+            $date->about_me = \request('about_me');
+        }
+        $date->save();
 
-        $profile->save();
-        return view('adminpanel.profile');
+        return redirect()->route('profile');
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -123,7 +125,7 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
