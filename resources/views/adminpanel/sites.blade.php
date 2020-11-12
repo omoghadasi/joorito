@@ -3,7 +3,7 @@
     <div class="content">
         <div class="container-fluid">
             <div class="row">
-                <a href="{{route('new_site')}}" role="button" class="btn btn-primary">ثبت سایت جدید</a>
+                <a href="{{route('sites.create')}}" role="button" class="btn btn-primary">ثبت سایت جدید</a>
                 <div class="col-md-12">
                     <div class="card text-right">
                         <div class="card-header card-header-primary">
@@ -63,10 +63,10 @@
                                                 <button type="button" rel="tooltip" class="btn btn-info p-2">
                                                     <i class="material-icons">shopping_cart</i>
                                                 </button>
-                                                <a href="{{route('edit_site',$site->id)}}" type="button" rel="tooltip" class="btn btn-success p-2">
+                                                <a href="{{route('sites.edit',$site->id)}}" type="button" rel="tooltip" class="btn btn-success p-2">
                                                     <i class="material-icons">edit</i>
                                                 </a>
-                                                <form action="{{route('delete_site',$site->id)}}" method="post" class="d-inline-block">
+                                                <form action="{{route('sites.destroy',$site->id)}}" method="post" class="d-inline-block">
                                                     @csrf
                                                     @method('delete')
                                                     <button class="btn btn-danger p-2" type="submit"><i class="material-icons">close</i></button>

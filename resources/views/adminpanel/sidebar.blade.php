@@ -23,7 +23,7 @@
             </li>
             @if(\Illuminate\Support\Facades\Auth::user()->role_id==2)
                 <li class="nav-item ">
-                    <a class="nav-link" href="{{route('sites')}}">
+                    <a class="nav-link" href="{{route('sites.index')}}">
                         <i class="material-icons">content_paste</i>
                         <p>سایت ها</p>
                     </a>

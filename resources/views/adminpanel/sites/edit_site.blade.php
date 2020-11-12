@@ -20,7 +20,7 @@
                                     </ul>
                                 </div>
                             @endif
-                            <form action="{{route('update_site',$site->id)}}" method="post">
+                            <form action="{{route('sites.update',$site->id)}}" method="post">
                                 @csrf
                                 @method('put')
                                 <div class="form-row">
