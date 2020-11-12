@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Profile;
 use Illuminate\Http\Request;
-use App\User;
+
 use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
@@ -44,7 +44,7 @@ class UserController extends Controller
      * Display the specified resource.
      *
      *
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\View\View
      */
     public function show()
     {
@@ -91,9 +91,9 @@ class UserController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param int $id
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function edit(Request $request)
+    public function edit()
     {
         $profiles = Profile::all()->where('user_id', Auth::id());
         foreach ($profiles as $date) {

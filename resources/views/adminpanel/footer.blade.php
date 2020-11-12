@@ -25,11 +25,13 @@
             </ul>
         </nav>
         <div class="copyright float-right">
-            &copy;
+            طراحی شده با <i class="material-icons">favorite</i> توسط
+            <a href="http://omoghadasi.ir" target="_blank">امید مقدسی</a> برای جستجویی بهتر.
+
             <script>
                 document.write(new Date().getFullYear())
-            </script>, made with <i class="material-icons">favorite</i> by
-            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
+            </script>
+            &copy;
         </div>
     </div>
 </footer>
