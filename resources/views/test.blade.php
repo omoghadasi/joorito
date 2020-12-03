@@ -15,6 +15,7 @@
 <?php
 
 
+use App\Role;
 use Automattic\WooCommerce\Client;
 
 $woocommerce = new Client(
@@ -22,12 +23,8 @@ $woocommerce = new Client(
     'ck_29dfcb4e01c8abcc089df28f4c9de942ebd929f9', // Your consumer key
     'cs_d122d7d78184246fb8c2c91e962c448b0cc6f723', // Your consumer secret
 );
-$array=$woocommerce->get('products');
-?>
-
-<?php
+$array = $woocommerce->get('products');
 foreach ($array as $item) {
-    //dd($item);
     echo $item->id;
     var_dump($item->images[0]->src);
     echo $item->name;
@@ -35,11 +32,6 @@ foreach ($array as $item) {
     echo $item->short_description;
     echo $item->price;
     echo "<br><br>";
-}
-
-$roles=\App\Role::all()->where('id',2);
-foreach ($roles as $role) {
-    echo $role->title;
 }
 ?>
 

@@ -27,6 +27,9 @@ class SiteRequest extends FormRequest
             'title' => 'required',
             'url' => 'required',
             'desc' => 'required',
+            'connection_type' => 'required',
+            'public_key' => 'required',
+            'private_key' => 'required',
         ];
     }
 }

@@ -45,17 +45,17 @@
                                     <div class="form-group col-md-2">
                                         <label for="connection_type">نوع اتصال</label>
                                         <input type="text" class="form-control" id="connection_type"
-                                               name="connection_type" placeholder="نوع اتصال شما...">
+                                               name="connection_type" placeholder="نوع اتصال شما..." value="{{$site->connection_type}}">
                                     </div>
                                     <div class="form-group col-md-5">
                                         <label for="public_key">کلید عمومی سایت</label>
                                         <input type="text" class="form-control" id="public_key" name="public_key"
-                                               placeholder="کد کلید عمومی سایت شما...">
+                                               placeholder="کد کلید عمومی سایت شما..." value="{{$site->public_key}}">
                                     </div>
                                     <div class="form-group col-md-5">
-                                        <label for="secret_key">کلید خصوصی سایت</label>
-                                        <input type="text" class="form-control" id="secret_key" name="secret_key"
-                                               placeholder="کد کلید خصوصی سایت شما...">
+                                        <label for="private_key">کلید خصوصی سایت</label>
+                                        <input type="text" class="form-control" id="private_key" name="private_key"
+                                               placeholder="کد کلید خصوصی سایت شما..." value="{{$site->private_key}}">
                                     </div>
                                 </div>
                                 <div class="form-group">

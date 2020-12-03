@@ -44,7 +44,7 @@
                                     <div class="form-group col-md-2">
                                         <label for="connection_type">نوع اتصال</label>
                                         <input type="text" class="form-control" id="connection_type"
-                                               name="connection_type" placeholder="نوع اتصال شما...">
+                                               name="connection_type" placeholder="نوع اتصال شما..." value="ووکامرس">
                                     </div>
                                     <div class="form-group col-md-5">
                                         <label for="public_key">کلید عمومی سایت</label>
@@ -53,7 +53,7 @@
                                     </div>
                                     <div class="form-group col-md-5">
                                         <label for="secret_key">کلید خصوصی سایت</label>
-                                        <input type="text" class="form-control" id="secret_key" name="secret_key"
+                                        <input type="text" class="form-control" id="private_key" name="private_key"
                                                placeholder="کد کلید خصوصی سایت شما...">
                                     </div>
                                 </div>

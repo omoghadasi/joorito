@@ -15,7 +15,8 @@ class CreateLinksTable extends Migration
     {
         Schema::create('tbl_links', function (Blueprint $table) {
             $table->id();
-            $table->integer('site_id');
+            $table->unsignedBigInteger('site_id');
+            $table->foreign('site_id')->references('id')->on('tbl_sites')->onDelete('cascade');
             $table->integer('link_type_id');
             $table->string('title');
             $table->string('desc');

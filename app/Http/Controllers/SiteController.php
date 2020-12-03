@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\SiteRequest;
 use App\Site;
+use App\User;
 use Exception;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
+
 use Illuminate\Http\Response;
 use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Auth;
@@ -23,8 +24,9 @@ class SiteController extends Controller
      */
     public function index()
     {
-        $sites = Site::all()->where('user_id', Auth::id());
-        return view('adminpanel.sites', ['sites' => $sites]);
+        $user = User::find(Auth::id());
+        $sites = $user->sites;
+        return view('adminpanel.sites', compact('sites'));
     }
 
     /**
@@ -50,6 +52,9 @@ class SiteController extends Controller
         $site->title = $validate_data['title'];
         $site->url = $validate_data['url'];
         $site->desc = $validate_data['desc'];
+        $site->connection_type = $validate_data['connection_type'];
+        $site->public_key = $validate_data['public_key'];
+        $site->private_key = $validate_data['private_key'];
         $site->user_id = Auth::id();
         $site->save();
 
@@ -59,14 +64,12 @@ class SiteController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  Site  $site
+     * @param Site $site
      * @return Application|Factory|Response|View
      */
     public function edit(Site $site)
     {
-        return view('adminpanel.sites.edit_site', [
-            'site' => $site
-        ]);
+        return view('adminpanel.sites.edit_site',compact('site'));
     }
 
     /**
@@ -82,6 +85,9 @@ class SiteController extends Controller
         $site->title = $validate_data['title'];
         $site->url = $validate_data['url'];
         $site->desc = $validate_data['desc'];
+        $site->connection_type = $validate_data['connection_type'];
+        $site->public_key = $validate_data['public_key'];
+        $site->private_key = $validate_data['private_key'];
         $site->user_id = Auth::id();
         $site->update();
 
