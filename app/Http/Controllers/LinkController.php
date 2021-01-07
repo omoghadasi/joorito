@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Link;
 use Illuminate\Http\Request;
 
 class LinkController extends Controller
@@ -34,7 +35,14 @@ class LinkController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $link=new Link();
+        $link->site_id=1;
+        $link->link_type_id=1;
+        $link->title=1;
+        $link->desc=1;
+        $link->url=1;
+        $link->img_url=1;
+        $link->save();
     }
 
     /**

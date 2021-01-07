@@ -10,31 +10,17 @@
 <body>
 <div class="col-md-12">
 
+    @foreach($links as $item)
 
+        @if($item->images)
+            <a href="{{$item->permalink}}"><img src="{{$item->images[0]->src}}" alt="Italian Trulli" width="200px" height="200px"></a>
+        @endif
+        <a href="{{$item->permalink}}">{{$item->name}}</a>
+        <p>{{$item->description}}</p>
+        <p>{{$item->price}}</p>
+        <br>
+    @endforeach
 </div>
-<?php
-
-
-use App\Role;
-use Automattic\WooCommerce\Client;
-
-$woocommerce = new Client(
-    'http://omoghadasi.ir', // Your store URL
-    'ck_29dfcb4e01c8abcc089df28f4c9de942ebd929f9', // Your consumer key
-    'cs_d122d7d78184246fb8c2c91e962c448b0cc6f723', // Your consumer secret
-);
-$array = $woocommerce->get('products');
-foreach ($array as $item) {
-    echo $item->id;
-    var_dump($item->images[0]->src);
-    echo $item->name;
-    echo $item->permalink;
-    echo $item->short_description;
-    echo $item->price;
-    echo "<br><br>";
-}
-?>
-
 </body>
 </html>
 

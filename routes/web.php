@@ -26,8 +26,6 @@ Route::get('/results', 'resultsController@showPage')->name('results');
 Route::get('/categories', 'categoriesController@showPage')->name('categories');
 Route::get('/statistics', 'statisticsController@showPage')->name('statistics');
 
-Route::get('/dev', function () {
-    return view('test');
-})->middleware('auth');
+Route::get('/dev','HomeController@checklinks')->name('checklinks')->middleware('auth');
 
 
